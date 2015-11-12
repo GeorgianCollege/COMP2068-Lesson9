@@ -1,16 +1,18 @@
-
-
-// declare my function
-function init():Number {
-	var myNum:Number = 5; 
+class Person {
+	// PRIVATE INSTANCE VARIABLE
+	private _name;
 	
-	console.log("My App is running...");
-	console.log("My number is " + myNum);
+	//CONSTRUCTOR +++++++++++++++++++++++
+	constructor(name:string) {
+		this._name = name;
+	}
 	
-	return myNum;
+	public sayName():void {
+		console.log("your name is: " + this._name)
+	}
 }
 
-// call my function
-console.log("The number is: " + init());
+var tom:Person = new Person("Tom");
+tom.sayName();
 
 

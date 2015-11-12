@@ -1,10 +1,13 @@
-// declare my function
-function init() {
-    var myNum = 5;
-    console.log("My App is running...");
-    console.log("My number is " + myNum);
-    return myNum;
-}
-// call my function
-console.log("The number is: " + init());
+var Person = (function () {
+    //CONSTRUCTOR +++++++++++++++++++++++
+    function Person(name) {
+        this._name = name;
+    }
+    Person.prototype.sayName = function () {
+        console.log("your name is: " + this._name);
+    };
+    return Person;
+})();
+var tom = new Person("Tom");
+tom.sayName();
 //# sourceMappingURL=app.js.map
